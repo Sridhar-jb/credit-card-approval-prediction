@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <main class="shell">
+    <section class="panel result">
+      <div class="heading">
+        <p>Prediction result</p>
+        <h1 class="{{ 'approved' if label == 'Approved' else 'rejected' }}">{{ label }}</h1>
+      </div>
+
+      {% if probability is not none %}
+        <div class="score">
+          <span>Approval probability</span>
+          <strong>{{ "%.1f"|format(probability * 100) }}%</strong>
+        </div>
+      {% endif %}
+
+      <dl class="summary">
+        {% for key, value in applicant.items() %}
+          <div>
+            <dt>{{ key.replace('_', ' ').title() }}</dt>
+            <dd>{{ value }}</dd>
+          </div>
+        {% endfor %}
+      </dl>
+
+      <a class="button" href="/">Check another applicant</a>
+    </section>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Credit Card Approval Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <main class="shell">
+    <section class="intro">
+      <div>
+        <p>Machine learning project</p>
+        <h1>Credit Card Approval Prediction System</h1>
+        <span>Python, Flask, Data Visualization, Classification Models, and IBM Cloud deployment support.</span>
+      </div>
+      <div class="intro-metrics" aria-label="Project workflow">
+        <strong>EDA</strong>
+        <strong>Preprocess</strong>
+        <strong>Train</strong>
+        <strong>Deploy</strong>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="heading">
+        <p>Real-time applicant screening</p>
+        <h2>Prediction Interface</h2>
+      </div>
+
+      <form action="/predict" method="post" class="grid">
+        <label>Gender
+          <select name="gender">
+            <option>Female</option>
+            <option>Male</option>
+          </select>
+        </label>
+        <label>Owns Car
+          <select name="own_car">
+            <option>No</option>
+            <option>Yes</option>
+          </select>
+        </label>
+        <label>Owns Property
+          <select name="own_property">
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </label>
+        <label>Annual Income
+          <input type="number" name="income" value="72000" min="0" step="1000">
+        </label>
+        <label>Income Type
+          <select name="income_type">
+            <option>Working</option>
+            <option>Commercial associate</option>
+            <option>State servant</option>
+            <option>Pensioner</option>
+          </select>
+        </label>
+        <label>Education
+          <select name="education">
+            <option>Higher education</option>
+            <option>Secondary</option>
+            <option>Incomplete higher</option>
+            <option>Academic degree</option>
+          </select>
+        </label>
+        <label>Family Status
+          <select name="family_status">
+            <option>Married</option>
+            <option>Single</option>
+            <option>Civil marriage</option>
+            <option>Separated</option>
+            <option>Widow</option>
+          </select>
+        </label>
+        <label>Housing Type
+          <select name="housing_type">
+            <option>House</option>
+            <option>Apartment</option>
+            <option>Rented apartment</option>
+            <option>With parents</option>
+          </select>
+        </label>
+        <label>Employment Years
+          <input type="number" name="employment_years" value="6" min="0" max="60" step="0.5">
+        </label>
+        <label>Age
+          <input type="number" name="age" value="39" min="18" max="90">
+        </label>
+        <label>Existing Loan Balance
+          <input type="number" name="existing_loan_balance" value="18000" min="0" step="1000">
+        </label>
+        <label>Credit Inquiries
+          <input type="number" name="credit_inquiries" value="1" min="0" max="30">
+        </label>
+        <label>Past Due Count
+          <input type="number" name="past_due_count" value="0" min="0" max="30">
+        </label>
+
+        <button type="submit">Predict Eligibility</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

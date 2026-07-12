@@ -1,0 +1,58 @@
+Logistic Regression
+===================
+              precision    recall  f1-score   support
+
+    Rejected       0.74      0.62      0.68       103
+    Approved       0.75      0.84      0.79       137
+
+    accuracy                           0.75       240
+   macro avg       0.75      0.73      0.73       240
+weighted avg       0.75      0.75      0.74       240
+
+
+Decision Tree
+=============
+              precision    recall  f1-score   support
+
+    Rejected       0.71      0.53      0.61       103
+    Approved       0.70      0.83      0.76       137
+
+    accuracy                           0.70       240
+   macro avg       0.70      0.68      0.69       240
+weighted avg       0.70      0.70      0.70       240
+
+
+Random Forest
+=============
+              precision    recall  f1-score   support
+
+    Rejected       0.75      0.54      0.63       103
+    Approved       0.72      0.86      0.78       137
+
+    accuracy                           0.72       240
+   macro avg       0.73      0.70      0.71       240
+weighted avg       0.73      0.72      0.72       240
+
+
+Gradient Boosting
+=================
+              precision    recall  f1-score   support
+
+    Rejected       0.72      0.50      0.59       103
+    Approved       0.69      0.85      0.76       137
+
+    accuracy                           0.70       240
+   macro avg       0.71      0.67      0.68       240
+weighted avg       0.70      0.70      0.69       240
+
+
+XGBoost
+=======
+              precision    recall  f1-score   support
+
+    Rejected       0.72      0.53      0.61       103
+    Approved       0.71      0.85      0.77       137
+
+    accuracy                           0.71       240
+   macro avg       0.72      0.69      0.69       240
+weighted avg       0.71      0.71      0.70       240
